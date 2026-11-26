@@ -1,0 +1,234 @@
+/* ===== BASGIATH · Identidad visual =====
+   Negro carbón dominante · borgoña/sangre de acento · dorado envejecido en ornamento · pergamino para documentos */
+:root{--carbon:#0b0907;--ash:#171310;--stone:#2b2520;--stone2:#6b5f50;--burg:#5e1020;--blood:#9c1c2a;--gold:#c09440;--bronze:#8a5a2b;--ivory:#efe2c3;--parch:#d9bd7e;--ink:#1c130b;
+--noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .22 0 0 0 0 .08 0 0 0 .55 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
+--clouds:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='34' fill='none' stroke='%231c130b' stroke-width='1.6'><path d='M0 33c0-9 8-14 16-12 0-10 12-15 21-9 6-8 21-6 24 4 9-4 19 2 17 10 8-1 14 4 14 9'/><path d='M60 33c4-6 12-8 18-5M96 33c3-5 9-7 14-5'/></svg>")}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--carbon);color:var(--ivory);font:500 1.22rem/1.65 'Cormorant Garamond',serif;overflow-x:hidden}
+button{font-family:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+#sky{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--burg),var(--blood),var(--gold));z-index:95}
+.parch{background:var(--noise),radial-gradient(130% 100% at 30% 15%,#ecd596 0,#d4af62 55%,#9a7332 100%);color:var(--ink);box-shadow:inset 0 0 70px #6a4a1a99}
+.cl::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:var(--clouds) repeat-x bottom/160px 34px;opacity:.75;pointer-events:none}
+.kick{font:600 .82rem 'Cormorant Garamond';letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}.kick.dk{color:var(--burg)}
+/* Botones: sello de la academia */
+.btn{font:400 1.12rem 'Bebas Neue';letter-spacing:.22em;color:var(--ivory);background:linear-gradient(180deg,#7a1526,#4d0c19);border:1px solid var(--gold);padding:13px 24px 11px;cursor:pointer;transition:.3s;box-shadow:0 5px 0 #2a0710}
+.btn::before{content:"✦";color:var(--gold);margin-right:12px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 0 #2a0710,0 0 28px #9c1c2a77}
+.btn.ghost{background:none;color:var(--ink);border-color:var(--bronze);box-shadow:none;padding:9px 16px 7px;font-size:1rem}.btn.ghost::before{content:none}
+.btn.ghost:hover{background:#1c130b14;box-shadow:none}
+/* Navegación: índice de libro */
+#nav{position:fixed;inset:0 0 auto 0;z-index:90;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,3vw,36px);pointer-events:none}
+#nav>a,#nav>button{pointer-events:auto}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ivory);text-decoration:none;font:400 1.05rem 'Bebas Neue';letter-spacing:.24em;text-shadow:0 1px 6px #000}.brand svg{width:18px;height:18px;fill:var(--gold)}
+#burger{display:flex;align-items:center;gap:12px;background:#0b0907cc;border:1px solid var(--gold);color:var(--ivory);padding:8px 16px 6px;font:400 1rem 'Bebas Neue';letter-spacing:.26em;cursor:pointer}
+#burger i{width:18px;height:8px;border-block:1.5px solid var(--gold);display:block}
+#links{position:fixed;inset:0;z-index:-1;display:none;flex-direction:column;justify-content:center;padding:70px clamp(24px,10vw,170px) 30px;background:radial-gradient(80% 60% at 75% 25%,#2a0d12,transparent),var(--carbon);pointer-events:auto}
+#nav.open #links{display:flex;animation:fade .4s}@keyframes fade{from{opacity:0}}
+.toc-h{font:600 .85rem 'Cormorant Garamond';letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+#links a{display:flex;align-items:baseline;gap:22px;color:var(--ivory);text-decoration:none;padding:8px 0 4px;border-bottom:1px solid #c0944033;font:400 clamp(1.7rem,4.8vw,3.2rem)/1.1 'Bebas Neue';letter-spacing:.06em;transition:.3s}
+#links a b{font:700 1rem 'Cormorant Garamond';color:var(--gold);width:2.6em;letter-spacing:.1em}
+#links a:hover,#links a.on{color:var(--gold);padding-left:14px}
+#rail{position:fixed;right:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);z-index:80;display:flex;flex-direction:column;gap:12px;align-items:center}
+#rail::before{content:"";position:absolute;top:-34px;bottom:-34px;width:2px;background:radial-gradient(circle,var(--gold) 1px,transparent 1.5px) center/2px 8px repeat-y;opacity:.55}
+#rail a{position:relative;width:26px;height:26px;display:grid;place-items:center;background:var(--carbon);border:1px solid #c0944066;color:var(--stone2);font:700 .72rem 'Cormorant Garamond';text-decoration:none;transition:.3s}
+#rail a.on{color:var(--carbon);background:var(--gold);border-color:var(--gold);transform:rotate(45deg) scale(1.1)}#rail a.on{font-size:0}#rail a.on::after{content:attr(data-n);font-size:.72rem;rotate:-45deg}
+/* Secciones */
+.sec{position:relative;min-height:100vh;padding:clamp(100px,14vh,160px) clamp(20px,7vw,110px) 90px}
+.sec:not(.hero)::before{content:"";position:absolute;top:0;left:50%;height:64px;width:2px;background:radial-gradient(circle,var(--gold) 1px,transparent 1.5px) center/2px 8px repeat-y;z-index:2}
+.sh{max-width:900px;margin-bottom:clamp(30px,6vh,70px);position:relative;z-index:2}
+.sh h2{font:400 clamp(2.8rem,8vw,7rem)/.88 'Bebas Neue';margin:0;letter-spacing:.01em}
+.sh .sub{font-style:italic;color:var(--parch);margin:16px 0 0;max-width:34em}
+.bignum{position:absolute;right:4vw;top:5vh;font:400 clamp(10rem,30vw,26rem)/1 'Bebas Neue';color:transparent;-webkit-text-stroke:1px #c0944030;pointer-events:none}
+.dark{background:radial-gradient(90% 55% at 85% 0,#2a0d12,transparent 65%),var(--carbon)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+/* Dragones de fondo: ascienden solos por el cielo (pose original, sin seguir el cursor) */
+.fly{position:absolute;left:var(--l0);top:108%;width:max(var(--w),54px);opacity:var(--o,1);pointer-events:none;color:#0a0605;filter:drop-shadow(0 0 8px #9c1c2a88);animation:rise var(--d) linear var(--dl) infinite both}
+.scene .fly svg{display:block;width:100%;height:auto;animation:sway 6s ease-in-out infinite alternate}
+.fly .wl,.fly .wr{transform-origin:180px 140px;animation:flp 2.2s ease-in-out infinite}
+@keyframes rise{from{top:108%;left:var(--l0)}to{top:-40%;left:var(--l1)}}
+@keyframes sway{from{translate:-12px 0}to{translate:12px 0}}
+@keyframes flp{50%{transform:scaleX(.9)}}
+/* I · Ingreso */
+.hero{padding:0;display:grid;align-items:end;overflow:hidden;isolation:isolate;min-height:100svh}
+.scene{position:absolute;inset:0;z-index:-1}.scene svg{width:100%;height:100%;display:block}
+.scene .ly{transform:translate(calc(var(--mx,0)*var(--k,0)*1px),calc(var(--my,0)*var(--k,0)*1px))}
+.dr1{animation:drift 16s ease-in-out infinite}.dr2{animation:drift 22s -6s ease-in-out infinite reverse}@keyframes drift{50%{transform:translate(22px,-12px)}}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(20px,4vw,70px);align-items:end;padding:130px clamp(20px,6vw,90px) clamp(40px,8vh,90px)}
+.hero h1{margin:0;font-weight:400}.ch{display:block;font:400 clamp(1.2rem,3vw,2rem) 'Bebas Neue';letter-spacing:.5em;color:var(--gold)}
+.tt{display:block;font:400 clamp(4rem,12.5vw,11rem)/.82 'Bebas Neue';letter-spacing:.01em;color:var(--ivory);text-shadow:0 4px 0 #000,0 0 70px #9c1c2a88}
+.hero h2{font:italic 600 clamp(1.5rem,2.8vw,2.2rem) 'Cormorant Garamond';color:var(--parch);margin:20px 0 0}
+.lore{font:italic 500 clamp(1.05rem,1.8vw,1.3rem)/1.5 'Cormorant Garamond';color:var(--ivory);opacity:.85;max-width:30em;margin:10px 0 0;text-shadow:0 2px 12px #000}
+.admit{position:relative;padding:34px 32px 60px;max-width:430px;justify-self:end;transform:rotate(1.6deg);box-shadow:0 30px 60px #000a,inset 0 0 70px #6a4a1a99;clip-path:polygon(0 1.5%,7% 0,15% 1.2%,26% 0,38% 1.4%,50% 0,62% 1.2%,75% 0,88% 1.4%,100% 0,100% 100%,0 100%)}
+.admit.rv.in{transform:rotate(1.6deg)}
+.stamp{display:inline-block;margin:0 0 14px;padding:4px 12px 2px;border:2px double var(--burg);color:var(--burg);font:400 1.2rem 'Bebas Neue';letter-spacing:.26em;transform:rotate(-3deg)}
+#frase{font:italic 500 1.32rem/1.5 'IM Fell English',serif;margin:0 0 14px}.ded{font-weight:700;margin:0 0 20px;letter-spacing:.04em}
+/* II · Correspondencia */
+#sobres{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(30px,4.4vw,84px);align-items:flex-start;position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto}
+.env{position:relative;width:min(310px,80vw);height:196px;border:0;padding:0;cursor:pointer;color:var(--ink);background:var(--noise),linear-gradient(160deg,#dcc088,#b98f48);box-shadow:0 24px 40px #000c,inset 0 0 40px #7a5a2288;transform:rotate(var(--rot,0));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.env:nth-child(1){--rot:-3deg}.env:nth-child(2){--rot:2deg;margin-top:60px}.env:nth-child(3){--rot:-1.5deg;margin-top:24px}
+.env::before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,#0000 calc(50% - .7px),#1c130b55 50%,#0000 calc(50% + .7px)) left bottom/50% 60% no-repeat,linear-gradient(to top left,#0000 calc(50% - .7px),#1c130b55 50%,#0000 calc(50% + .7px)) right bottom/50% 60% no-repeat}
+.env:hover{transform:rotate(0) translateY(-10px) scale(1.03)}
+.ef{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 62%);background:var(--noise),linear-gradient(#c9a35a,#a47a38);transform-origin:top;transition:transform .5s}.env:hover .ef{transform:perspective(500px) rotateX(16deg)}
+.tag{position:absolute;left:16px;bottom:12px;text-align:left;font:700 1rem 'Cormorant Garamond';letter-spacing:.14em;text-transform:uppercase;line-height:1.25}.tag small{display:block;font-size:.7rem;opacity:.7}
+.seal{position:absolute;left:50%;top:60%;width:56px;height:56px;transform:translate(-50%,-50%);display:grid;place-items:center;filter:drop-shadow(0 3px 3px #0009);z-index:3}
+.seal b{position:absolute;inset:0;border-radius:46% 54% 50% 50%/52% 46% 54% 48%;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--c) 75%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000))}
+.seal b:first-child{clip-path:polygon(0 0,56% 0,44% 50%,58% 100%,0 100%)}.seal b:nth-child(2){clip-path:polygon(56% 0,100% 0,100% 100%,58% 100%,44% 50%)}
+.seal svg{position:relative;width:26px;height:26px;fill:#0005;stroke:#fff3;stroke-width:.4}
+.brk b:first-child{animation:sl .9s .35s forwards}.brk b:nth-child(2){animation:sr .9s .35s forwards}.brk svg{animation:fade .5s .5s reverse forwards}
+@keyframes sl{to{transform:translate(-30px,18px) rotate(-30deg);opacity:0}}@keyframes sr{to{transform:translate(30px,18px) rotate(30deg);opacity:0}}
+/* Documento (modal) */
+#modal{position:fixed;inset:0;z-index:100;background:#000d;display:grid;place-items:center;padding:16px}#modal[hidden]{display:none}
+.card{position:relative;width:min(680px,100%);max-height:90vh;overflow:auto;padding:46px clamp(22px,5vw,54px) 34px;color:var(--ink);background:var(--noise),radial-gradient(120% 100% at 30% 10%,#ecd596,#cfa85a 70%,#9a7332);box-shadow:0 40px 90px #000,inset 0 0 80px #6a4a1a;outline:1px solid #1c130b44;outline-offset:-14px;animation:op .6s cubic-bezier(.2,.9,.2,1)}
+@keyframes op{from{transform:translateY(30px) scale(.94);opacity:0}}
+.card h3{font:400 clamp(2rem,5vw,3rem)/1 'Bebas Neue';margin:0 0 14px;letter-spacing:.04em}.card .kick{color:var(--burg)}.card p{margin:0 0 14px}
+.x{position:absolute;top:12px;right:14px;width:34px;height:34px;background:none;border:1px solid var(--bronze);cursor:pointer}.x::before,.x::after{content:"";position:absolute;left:7px;right:7px;top:15px;height:1.5px;background:var(--ink);rotate:45deg}.x::after{rotate:-45deg}
+.oe{position:relative;margin:6px 0 20px;perspective:700px}
+.oe .flap{position:absolute;left:0;right:0;top:0;height:84px;z-index:2;background:var(--noise),linear-gradient(#a47a38,#7f5a26);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;animation:fp .8s .8s forwards}
+.oe .seal{top:84px}@keyframes fp{to{transform:rotateX(-180deg);opacity:0}}
+.paper{font:italic 500 1.32rem/1.7 'IM Fell English',serif;white-space:pre-line;padding:20px 4px 6px;border-top:1px solid #1c130b44;animation:pp .9s .8s both}
+@keyframes pp{from{clip-path:inset(0 0 100% 0);opacity:.2}}
+.mnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 14px;font-weight:700}
+.wish::before{content:"";display:inline-block;width:11px;height:11px;margin-right:10px;background:var(--burg);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.card img.chim{display:block;width:104px;margin:-14px 36px 6px auto;filter:drop-shadow(0 6px 6px #0006);animation:drop .8s cubic-bezier(.3,1.5,.5,1) both,fl 4s 1s ease-in-out infinite}
+@keyframes drop{from{transform:translateY(-120px) scale(.7);opacity:0}}@keyframes fl{50%{translate:0 -8px}}
+.mm{display:block;width:100%;margin:12px 0;border:7px solid #f4ebd3;box-shadow:0 8px 18px #3a2a1099}.empty{font-style:italic;opacity:.7}
+.date{font:italic 600 1.1rem 'IM Fell English',serif;color:var(--burg);display:block;margin-bottom:4px}
+/* III · Crónicas del Archivo */
+.arch{background:var(--noise),radial-gradient(140% 90% at 50% 0,#e8cd8c,#cfa85a 60%,#8d672b);color:var(--ink);border-top:3px double var(--bronze);box-shadow:inset 0 0 120px #5a3a1099;overflow:hidden}
+.arch::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:var(--clouds) repeat-x bottom/160px 34px}
+.arch .kick{color:var(--burg)}.arch .sub{color:#4a3418}.arch::before{background-image:radial-gradient(circle,var(--ink) 1px,transparent 1.5px)!important}
+#constel{position:relative;max-width:1000px;margin:0 auto;padding-bottom:40px}
+#constel::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);background:radial-gradient(circle,var(--ink) 1.2px,transparent 1.8px) center/2px 10px repeat-y;opacity:.7}
+.reg-ini,.reg-fin{position:relative;z-index:1;text-align:center;margin:0 0 6px;font:400 1rem 'Bebas Neue';letter-spacing:.4em;color:var(--burg)}.reg-fin{margin:10px 0 0}
+.reg-ini span,.reg-fin span{display:inline-block;padding:2px 14px 0;background:#d4b068;border:1px solid #8a5a2b88}
+.year{position:relative;text-align:center;margin:40px 0 22px;z-index:1}
+.year small{display:block;font:700 .8rem 'Cormorant Garamond';letter-spacing:.42em;text-transform:uppercase;color:var(--burg);margin:0 0 6px;text-shadow:0 0 8px #d4b068}
+.year span{display:inline-block;background:var(--ink);color:var(--parch);font:400 2.3rem/1 'Bebas Neue';letter-spacing:.22em;padding:8px 24px 4px;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,10px 100%,0 50%)}
+.mem{position:relative;display:flex;width:50%;margin-bottom:34px}
+.mem.l{justify-content:flex-end;padding-right:50px}.mem.r{margin-left:50%;padding-left:50px}
+.mem::before{content:"";position:absolute;top:29px;width:36px;height:2px;background:var(--ink);opacity:.55}.mem.l::before{right:14px}.mem.r::before{left:14px}
+.node{position:absolute;top:30px;width:34px;height:34px;padding:0;background:none;border:0;cursor:pointer;z-index:3;transform:translateY(-50%);filter:drop-shadow(0 3px 4px #0008)}
+.mem.l .node{right:-17px}.mem.r .node{left:-17px}
+.wax{display:grid;place-items:center;width:100%;height:100%;border-radius:48% 52% 50% 50%/52% 46% 54% 48%;background:radial-gradient(circle at 35% 30%,#c4384a,#8a1424 55%,#4d0c19);box-shadow:inset 0 0 0 2px #c0944099;transition:.3s}
+.wax svg{width:58%;fill:#e8c46a;stroke:#4d0c19;stroke-width:.5}.node:hover .wax{transform:scale(1.15) rotate(12deg)}
+/* Folio de crónica */
+.pol{display:block;position:relative;width:var(--w,300px);max-width:100%;padding:0 0 16px;border:0;cursor:pointer;color:var(--ink);text-align:left;background:var(--noise),linear-gradient(#f1e5c4,#e2cf9c);box-shadow:0 14px 26px #3a2a1099,inset 0 0 0 1px #1c130b55,inset 0 0 0 6px #f1e5c4,inset 0 0 0 7px #8a5a2b99;transform:rotate(var(--rot,-1deg));transition:.4s}
+.pol:hover{transform:rotate(0) translateY(-6px) scale(1.03)}
+.fol{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0 16px 12px;padding:16px 0 7px;border-bottom:1px solid #1c130b55}
+.fol i{font:400 1.05rem 'Bebas Neue';letter-spacing:.2em;font-style:normal;color:var(--burg);white-space:nowrap}.fol em{font:italic 600 .8rem 'Cormorant Garamond';letter-spacing:.06em;opacity:.7;white-space:nowrap}
+.v1 .pol{color:var(--ivory);background:var(--noise),linear-gradient(#221a15,#15100d);box-shadow:0 14px 26px #3a2a10aa,inset 0 0 0 1px #c09440,inset 0 0 0 6px #1b1410,inset 0 0 0 7px #c0944077}
+.v1 .fol{border-color:#c0944066}.v1 .fol i,.v1 .cap time{color:var(--gold)}
+.v2 .pol{background:var(--noise),linear-gradient(#e4d3a6,#d3bb80);border-left:9px solid var(--burg)}
+.ph{display:block;margin:0 16px;aspect-ratio:var(--ar,4/3);background:#1c130b;overflow:hidden;position:relative;outline:1px solid #8a5a2b;outline-offset:3px}.ph img{width:100%;height:100%;object-fit:cover;filter:sepia(.3) contrast(1.05)}
+.ph0{display:grid;place-items:center;background:repeating-conic-gradient(#0000 0 .7deg,#c0944055 .7deg 4deg),radial-gradient(circle,#3a1018,#0b0907)}.ph0 svg{width:30%;fill:var(--gold)}
+.vph::after{content:"";position:absolute;left:50%;top:50%;border-left:22px solid var(--ivory);border-block:14px solid transparent;transform:translate(-30%,-50%);filter:drop-shadow(0 0 6px #000)}
+.cap{display:block;margin-top:14px;padding:0 18px}.cap time{font:italic 600 .98rem 'IM Fell English',serif;color:var(--burg);display:block}.cap time::before{content:"Registrada en "}.cap b{font:400 1.5rem/1 'Bebas Neue';letter-spacing:.05em}
+/* Dragón que sobrevuela las crónicas */
+#dragonVuelo{position:absolute;left:0;top:0;z-index:6;width:var(--sz,190px);height:var(--sz,190px);padding:0;border:0;background:none;cursor:pointer;will-change:transform;touch-action:manipulation;-webkit-tap-highlight-color:transparent;filter:drop-shadow(0 0 7px #9c1c2acc) drop-shadow(0 0 16px #c0944066)}
+#dragonVuelo[hidden]{display:none}
+#dragonVuelo,#dragonVuelo .dbody{pointer-events:auto}#dragonVuelo:focus-visible{outline-offset:-6px;border-radius:50%}
+#dragonVuelo.still{left:auto;right:4%;top:360px;transform:rotate(-14deg)}
+.dbody{position:absolute;inset:0;display:block;animation:glide 3.2s ease-in-out infinite}@keyframes glide{50%{transform:scale(1.045)}}
+.dw{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.dc{clip-path:inset(0 38% 0 38%)}
+.dl{clip-path:inset(0 60% 0 0);transform-origin:40% 50%;animation:flapl 1.25s ease-in-out infinite}
+.dg{clip-path:inset(0 0 0 60%);transform-origin:60% 50%;animation:flapl 1.25s ease-in-out infinite}
+@keyframes flapl{0%,100%{transform:scaleX(1) scaleY(1)}50%{transform:scaleX(.74) scaleY(1.05)}}
+.dfb{position:absolute;inset:0;width:100%;height:100%;animation:flapl 1.25s ease-in-out infinite}
+/* Sorpresa: dibujo descubierto */
+#sorpresa{position:fixed;inset:0;z-index:130;display:grid;place-items:center;padding:14px;overflow:auto;background:radial-gradient(70% 60% at 50% 40%,#3a0d16f2,#050303f7)}#sorpresa[hidden]{display:none}
+.sr-glow{position:fixed;inset:0;opacity:0;background:radial-gradient(38% 34% at 50% 42%,#d9a52144,transparent 72%)}#sorpresa.in .sr-glow{animation:glw 2s .3s forwards}@keyframes glw{to{opacity:1}}
+.sr-card{position:relative;width:min(660px,100%);max-height:96vh;overflow:auto;padding:36px clamp(16px,4vw,40px) 28px;text-align:center;color:var(--ivory);background:var(--noise),linear-gradient(#1d1410,#0f0a08);border:1px solid var(--gold);outline:1px solid #c0944066;outline-offset:6px;box-shadow:0 0 90px #9c1c2a66,0 40px 90px #000}
+#sorpresa.in .sr-card{animation:srin 1s cubic-bezier(.2,.9,.2,1) both}@keyframes srin{from{opacity:0;transform:translateY(40px) scale(.92)}}
+.sr-card .kick{color:var(--gold);margin-bottom:16px}
+.sr-x{border-color:var(--gold)}.sr-x::before,.sr-x::after{background:var(--ivory)}
+.sr-frame{position:relative;margin:0 auto 24px;padding:14px;width:fit-content;max-width:100%;background:linear-gradient(145deg,#d8b25c,#8a5a2b 42%,#e8c978 60%,#7a4e22);box-shadow:0 0 0 1px #000,0 18px 40px #000c,0 0 50px #c0944066;animation:fpulse 4s ease-in-out infinite}
+@keyframes fpulse{50%{box-shadow:0 0 0 1px #000,0 18px 40px #000c,0 0 80px #d9a52199}}
+.sr-img{position:relative;display:grid;place-items:center;min-width:min(380px,62vw);min-height:220px;padding:8px;background:#0b0907;border:2px solid #1c130b;clip-path:circle(0% at 50% 50%)}
+.sr-img.on{animation:unveil 1.9s .45s cubic-bezier(.3,.7,.2,1) forwards}
+@keyframes unveil{0%{clip-path:circle(0% at 50% 50%);filter:brightness(2.4) blur(8px)}100%{clip-path:circle(85% at 50% 50%);filter:none}}
+.sr-img img{display:block;max-width:100%;max-height:min(42vh,440px);width:auto;height:auto;object-fit:contain}
+.sr-shine{position:absolute;inset:14px;overflow:hidden;pointer-events:none}.sr-shine::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,#fff3b066 50%,transparent 62%);transform:translateX(-130%)}
+#sorpresa.in .sr-shine::after{animation:shn 2s 2.2s ease-in-out 1 forwards}@keyframes shn{to{transform:translateX(130%)}}
+.sr-frame i{position:absolute;width:24px;height:24px;background:#f3dd91;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);filter:drop-shadow(0 0 5px #000)}
+.sr-frame .c1{left:-10px;top:-10px}.sr-frame .c2{right:-10px;top:-10px}.sr-frame .c3{left:-10px;bottom:-10px}.sr-frame .c4{right:-10px;bottom:-10px}
+.sr-frame figcaption{margin-top:10px;font:italic 700 1.05rem 'Cormorant Garamond';color:#1c130b}
+.sr-card h3{font:400 clamp(2rem,5vw,2.9rem)/1 'Bebas Neue';margin:0 0 12px;letter-spacing:.04em}
+.sr-text{font:italic 500 1.18rem/1.55 'IM Fell English',serif;margin:0 0 22px;color:var(--parch)}
+/* IV · Salón de los bardos */
+.bardos{background:radial-gradient(70% 60% at 20% 70%,#3a0d16,transparent 70%),var(--carbon)}
+.salon{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;gap:clamp(26px,5vw,80px);align-items:center;position:relative;z-index:2}
+.cover{margin:0;padding:14px;border:1px solid var(--gold);outline:1px solid #c0944066;outline-offset:7px;max-width:380px;justify-self:center;transform:rotate(-2.5deg)}
+.cover img,.ph1{width:100%;aspect-ratio:1;object-fit:cover;display:block}.ph1{display:grid;place-items:center;background:repeating-conic-gradient(#0000 0 .7deg,#c0944044 .7deg 3.5deg),radial-gradient(circle,#5e1020,#0b0907)}.ph1 svg{width:42%;fill:var(--gold)}
+.cover figcaption{text-align:center;margin-top:12px;font:600 .85rem 'Cormorant Garamond';letter-spacing:.3em;text-transform:uppercase;color:var(--parch)}
+.prog{position:relative;padding:40px clamp(24px,4vw,46px) 70px;transform:rotate(.8deg);box-shadow:0 30px 60px #000a,inset 0 0 70px #6a4a1a99}
+#musicaTxt{font:italic 500 1.28rem/1.55 'IM Fell English',serif;margin:0}
+#artistas{list-style:none;counter-reset:a;padding:0;margin:20px 0}
+#artistas li{counter-increment:a;display:flex;align-items:baseline;gap:12px;border-bottom:1px dotted #1c130b77;padding:6px 0 2px;font:400 1.7rem 'Bebas Neue';letter-spacing:.08em}
+#artistas li::before{content:counter(a,upper-roman);color:var(--burg);width:2.2em;font:700 1rem 'Cormorant Garamond'}#artistas em{margin-left:auto;font:italic 600 1rem 'Cormorant Garamond';color:var(--burg);letter-spacing:0}
+.staff{display:block;width:100%;max-width:420px;margin:6px 0 0}
+.spbtn{display:inline-flex;align-items:center;gap:14px;margin-top:22px;font:400 1.22rem 'Bebas Neue';letter-spacing:.24em;color:var(--ivory);text-decoration:none;background:linear-gradient(180deg,#5e1020,#2e0710);border:1px solid var(--gold);padding:15px 24px 12px;box-shadow:0 6px 0 #1c0509;transition:.3s}
+.spbtn svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;margin-top:-3px}.spbtn:hover{transform:translateY(-3px);box-shadow:0 10px 0 #1c0509,0 0 34px #9c1c2a99}
+.spbtn.off{opacity:.55;cursor:not-allowed}.spbtn.off:hover{transform:none;box-shadow:0 6px 0 #1c0509}.nota{font-style:italic;font-size:.95rem;margin:12px 0 0}
+/* V · Registro de mensajes: sobres lacrados */
+.mensajes{background:radial-gradient(60% 50% at 10% 90%,#2a0d12,transparent),linear-gradient(#0b0907,#181310 50%,#0b0907)}
+#msgs{position:relative;z-index:2;max-width:1040px;margin:0 auto}
+.sv-list{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 24px}
+.sv{--c:#9c1c2a;position:relative;flex:0 0 calc((100% - 96px)/5);min-width:0;aspect-ratio:3/2.1;border:0;padding:0;cursor:pointer;color:var(--ink);background:var(--noise),linear-gradient(160deg,#dcc088,#b98f48);box-shadow:0 14px 24px #000c,inset 0 0 30px #7a5a2288;transform:rotate(var(--rt,0));transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.sv::before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,#0000 calc(50% - .7px),#1c130b55 50%,#0000 calc(50% + .7px)) left bottom/50% 60% no-repeat,linear-gradient(to top left,#0000 calc(50% - .7px),#1c130b55 50%,#0000 calc(50% + .7px)) right bottom/50% 60% no-repeat}
+.sv:hover,.sv:focus-visible{transform:rotate(0) translateY(-8px) scale(1.04);box-shadow:0 22px 34px #000d,0 0 26px #9c1c2a66,inset 0 0 30px #7a5a2288}
+.sf{position:absolute;inset:0;z-index:1;clip-path:polygon(0 0,100% 0,50% 62%);background:var(--noise),linear-gradient(#c9a35a,#a47a38);transform-origin:top;transition:transform .5s}
+.sv:hover .sf{transform:perspective(500px) rotateX(16deg)}
+.sv .seal{width:40px;height:40px;top:58%;z-index:3}.sv .seal svg{width:19px;height:19px}.sv .seal svg image{pointer-events:none}
+.sl{position:absolute;left:12%;right:12%;bottom:8%;height:74%;z-index:0;opacity:0;background:var(--noise),#f1e5c4;box-shadow:0 0 14px #ffdf8a88;transform:translateY(40%)}
+.stg{position:absolute;left:12px;right:12px;bottom:8px;z-index:2;text-align:left;line-height:1.2;pointer-events:none}
+.stg small{display:block;font:700 .62rem 'Cormorant Garamond';letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+.stg b{display:block;font:700 .86rem 'Cormorant Garamond';letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sv.cb{--c:#c09440;color:var(--ivory);background:linear-gradient(#211b16,#171310);border:1px solid var(--gold);outline:1px solid #c0944044;outline-offset:4px}.sv.cb .sf{background:linear-gradient(#2c231c,#1d1712);border-bottom:1px solid #c0944055}
+.sv.bg{--c:#d9a521;color:var(--ivory);background:linear-gradient(160deg,#6f1426,#3a0a14);box-shadow:0 14px 24px #000c,inset 0 0 0 1px #c0944066}.sv.bg .sf{background:linear-gradient(#7d1a2e,#55101f)}
+.sv.cb::before,.sv.bg::before{background:linear-gradient(to top right,#0000 calc(50% - .7px),#c0944044 50%,#0000 calc(50% + .7px)) left bottom/50% 60% no-repeat,linear-gradient(to top left,#0000 calc(50% - .7px),#c0944044 50%,#0000 calc(50% + .7px)) right bottom/50% 60% no-repeat}
+.sv.opening{transform:rotate(0) scale(1.08);z-index:4}
+.sv.opening .sf{animation:fpv .6s .1s forwards}.sv.opening .sl{animation:lt .8s .3s forwards}
+.sv.opening .seal b:first-child{animation:sl .8s forwards}.sv.opening .seal b:nth-child(2){animation:sr .8s forwards}.sv.opening .seal svg{animation:fade .4s reverse forwards}
+@keyframes fpv{to{transform:perspective(500px) rotateX(-175deg);opacity:0}}@keyframes lt{from{opacity:0;transform:translateY(40%)}to{opacity:1;transform:translateY(-30%) rotate(-2deg)}}
+.sv.read .sf{opacity:.55;filter:brightness(.82)}.sv.read .seal{opacity:.8;top:44%}.sv.read .seal b:first-child{transform:translate(-10px,6px) rotate(-24deg)}.sv.read .seal b:nth-child(2){transform:translate(10px,6px) rotate(24deg)}.sv.read .seal svg{opacity:0}
+.cnt{text-align:center;margin:34px 0 0;font:600 .9rem 'Cormorant Garamond';letter-spacing:.3em;text-transform:uppercase;color:var(--parch)}
+.reader{position:relative;max-width:720px;margin:0 auto;padding:30px clamp(20px,5vw,50px) 38px;transform:rotate(-.4deg);animation:op .6s cubic-bezier(.2,.9,.2,1);box-shadow:0 30px 60px #000c,inset 0 0 70px #6a4a1a99}
+.rtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}.rcnt{font:700 .95rem 'Cormorant Garamond';letter-spacing:.2em;color:var(--burg)}
+.reader .kick{color:var(--burg)}.reader h3{font:400 clamp(2rem,5vw,3rem)/1 'Bebas Neue';margin:0 0 14px;letter-spacing:.04em;outline:0}
+/* VI · Último capítulo */
+.final{--pb:clamp(100px,9.5vw,180px);--pb0:320px;background:#0b0907;overflow:hidden;isolation:isolate;padding-bottom:var(--pb)}
+.fcontent{position:relative;max-width:1000px;margin:0 auto}
+.fgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:start}
+.page{position:relative;padding:34px 34px 50px;transform:rotate(-.8deg);box-shadow:0 30px 60px #000c,inset 0 0 70px #6a4a1a99}
+#mensajeJunto{margin:0;font:500 1.2rem/1.7 'IM Fell English',serif;white-space:pre-line;min-height:8em}#mensajeJunto::first-letter{font:400 4.2rem/.8 'Bebas Neue';float:left;margin:6px 10px 0 0;color:var(--burg)}
+#videoBox{margin-top:56px}.vid{position:relative;border:1px solid var(--gold);padding:10px;cursor:pointer;background:#0b0907;box-shadow:0 0 0 6px #0b0907,0 0 0 7px #c0944088,0 30px 60px #000}
+.vid img,.vid video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:radial-gradient(circle,#3a1018,#0b0907)}
+.play{position:absolute;inset:10px;display:grid;place-items:center;background:#0b090755}.play i{width:70px;height:70px;border:1px solid var(--gold);background:#5e1020;rotate:45deg;display:grid;place-items:center}.play i::before{content:"";border-left:18px solid var(--gold);border-block:11px solid transparent;margin-left:5px;rotate:-45deg}
+.big{font:italic 500 clamp(1.5rem,3.2vw,2.6rem)/1.35 'Cormorant Garamond',serif;color:var(--ivory);max-width:27em;margin:90px auto 36px;text-align:center;text-shadow:0 2px 24px #000}
+.fin{text-align:center}.colo{display:flex;align-items:center;gap:18px;margin:40px 0 0;font:400 1.1rem 'Bebas Neue';letter-spacing:.4em;color:var(--gold)}.colo::before,.colo::after{content:"";flex:1;height:2px;background:radial-gradient(circle,var(--gold) 1px,transparent 1.5px) center/8px 2px repeat-x}
+/* Zelev */
+#fox{position:fixed;right:14px;bottom:14px;width:84px;height:84px;z-index:60;cursor:pointer;animation:fl 4s ease-in-out infinite;filter:drop-shadow(0 0 14px #ff8a3d55)}
+#fox.jump{animation:jp .5s}@keyframes jp{40%{translate:0 -50px}}
+#fox .tail{transform-origin:20px 70px;animation:tl 1.2s ease-in-out infinite alternate}@keyframes tl{to{rotate:18deg}}
+#fox.walk{animation:wk 7s ease-in-out}@keyframes wk{0%,100%{translate:0 0}25%{translate:-18vw -6px}35%{translate:-18vw 0}50%{translate:-38vw -6px}60%{translate:-38vw 0}80%{translate:-18vw -6px}}
+#fox.walk svg{animation:bob .35s infinite alternate}@keyframes bob{to{transform:translateY(-4px) rotate(2deg)}}
+#fox .zz{display:none}#fox.sleep .zz{display:block}#fox.sleep{animation:none;filter:brightness(.75)}#fox.sleep .tail{animation:none}#fox.sleep::after{content:"z z";position:absolute;top:-16px;right:4px;font:italic 700 1.1rem 'Cormorant Garamond';color:var(--gold);animation:fl 2s infinite}
+#bubble{position:fixed;right:106px;bottom:62px;max-width:240px;background:#e8d4a0;color:var(--ink);padding:10px 14px;font:700 1rem/1.3 'Cormorant Garamond';border:1px solid var(--bronze);box-shadow:4px 4px 0 #000a;z-index:60;opacity:0;transition:opacity .3s;pointer-events:none}#bubble.on{opacity:1}
+/*#hideFox{position:fixed;right:14px;bottom: 130px;z-index:61;padding:3px 8px 1px;font:700 .68rem 'Cormorant Garamond';letter-spacing:.16em;text-transform:uppercase;background:var(--carbon);color:var(--parch);border:1px solid var(--bronze);cursor:pointer}*/
+#top{position:fixed;left:18px;bottom:22px;z-index:60;width:40px;height:40px;rotate:45deg;display:none;place-items:center;background:var(--carbon);border:1px solid var(--gold);cursor:pointer}#top.show{display:grid}#top::before{content:"";width:10px;height:10px;border:solid var(--gold);border-width:2px 0 0 2px}
+.spark{position:fixed;z-index:120;pointer-events:none;color:var(--gold);font-size:1.3rem;text-shadow:0 0 8px var(--blood);animation:sk 1.2s forwards}@keyframes sk{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+@media(max-width:900px){#rail{display:none}.hero-grid,.salon,.fgrid{grid-template-columns:1fr}.admit{justify-self:start;max-width:none}.sv{flex-basis:calc((100% - 48px)/3)}#videoBox{margin-top:10px}}
+@media(max-width:720px){.brand{font-size:.9rem}.sec{padding-top:96px}#constel::before{left:18px}.year{text-align:left;padding-left:2px}.reg-ini,.reg-fin{text-align:left;letter-spacing:.3em;padding-left:2px}.mem,.mem.r{width:100%;margin-left:0;padding:0 0 0 56px;justify-content:flex-start}.mem .node{left:1px!important;right:auto!important}.mem.l::before,.mem.r::before{left:17px;right:auto;width:38px}.fol em{display:none}.mem:nth-of-type(n) .pol{--w:100%}#fox{width:64px;height:64px}#bubble{right:80px}#hideFox{bottom:84px}.final{--pb:clamp(80px,22vw,120px);--pb0:220px}.page{transform:none}}
+@media(max-width:560px){.sv-list{gap:24px 16px}.sv{flex-basis:calc((100% - 16px)/2)}.reader{transform:none}.rtop{flex-wrap:wrap}.mnav{flex-direction:column;align-items:stretch}.sr-card{padding-top:44px}}
+@media(prefers-reduced-motion:reduce){.fly{top:var(--t);animation:none}*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.paper{clip-path:none}.sr-img{clip-path:none}.sr-glow{opacity:1}.sv.read .sf{opacity:.55}}
+
+#nav::before{content:"";position:fixed;inset:0 0 auto 0;height:84px;background:linear-gradient(#0b0907dd,transparent);pointer-events:none;z-index:-2}
+.seal{filter:drop-shadow(0 3px 3px #0009) saturate(.75) brightness(.92)}
+.blank{aspect-ratio:16/9;background:radial-gradient(circle,#3a1018,#0b0907)}
+.btn,.spbtn{text-transform:uppercase}
+/* La escena conserva su composición original (luna junto al texto); solo se recorta la franja oscura sobrante del final (--pb0 → --pb).
+   Fondo continuo: el cielo de la escena nace del mismo tono que la sección y se funde con una máscara, sin borde visible */
+.final{background:linear-gradient(#0b0907 0,#080605 38%,#0f0808 100%)}
+#finalScene{top:auto;bottom:calc(var(--pb) - var(--pb0));height:min(calc(100% + var(--pb0) - var(--pb)),max(640px,56vw));-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 34%);mask-image:linear-gradient(to bottom,transparent 0,#000 34%)}
