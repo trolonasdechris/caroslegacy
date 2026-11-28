@@ -30,7 +30,7 @@ Te mando un abrazote enorme y un besote en la coli. Te adoro muchísimooo, ¡fel
   {fecha:"2025",titulo:"[Ejemplo] Recuerdo 7",texto:"Texto editable.",media:[]},
   {fecha:"2026",titulo:"[Ejemplo] Recuerdo 8",texto:"Texto editable.",media:[]},
   {fecha:"Diciembre 2026",titulo:"[Ejemplo] Recuerdo 9",texto:"Texto editable.",media:[]}],
- musica:{texto:"La música fue una de las cosas que nos unió, Caro. Todavía recordamos con cariño a CNCO y a Christopher Vélez, y también compartimos el gusto por la música en general. Tantas canciones se quedaron pegadas a nuestros recuerdos que reunimos aquí algunas muy importantes para nosotras y otras que, simplemente, nos hacen acordar a ti.",
+ musica:{texto:"Por otro lado, la música también fue una de las cositas que nos unió. Siempre tenemos presentes a CNCO y ahora acompañamos a Chris en su etapa como solista. Pero, en sí, hay tantas canciones que nos traen recuerdos que quisimos juntar algunas de nuestras favoritas y otras que, simplemente, nos hacen acordar a ti.",
   // ENLACE DE SPOTIFY (solo botón externo, sin reproductor propio). Pega aquí tu playlist (cualquier enlace de "Compartir" de Spotify sirve, también el URI spotify:playlist:...)
   spotify:"",portada:"",artistas:["Christopher Vélez","Stray Kids","ATEEZ","CNCO"]} /* portada: "assets/images/playlist.jpg" */,
  // MENSAJES (~10): agrega o edita.
@@ -55,7 +55,7 @@ No he leído Alas de sangre pero sé que te encanta, así que me tomé el tiempo
 Que este nuevo capítulo de tu historia esté lleno de magia, amor, aventuras y muchas razones para sonreír. Que nunca nos falte tu risa Coraline, que hace brillar todo lo que hay alrededor tqmm! 
 Disfruta muchísimo tu día hoy y siempreeee! 🎂 🐉`},
 ],
- mensajeJunto:"[EJEMPLO] Nuestro mensaje conjunto para Caro: amistad desde 2023, locuras, bromas internas, deseos para sus 23...",
+ mensajeJunto:"Y bueno, Caro, no podía faltar un pequeño recopilatorio de tantos momentos que hemos compartido contigo. Entre risas, ocurrencias y recuerdos que guardamos con muchísimo cariño, quisimos juntar un pedacito de todo lo vivido. Gracias por cada momento y por todas las anécdotas que todavía nos quedan por contar. Esperamos que al verlo sonrías tanto como nosotras al recordar cada uno de estos momentos. ",
  video:{poster:"",src:""}, // ej: src:"assets/videos/recap.mp4", poster:"assets/images/portada.jpg"
  felicitacion:"Caro, si algo tenemos claro es que la vida es mucho más bonita desde que coincidimos contigo. Ojalá este nuevo capítulo te regale tantas alegrías como las que tú nos has dado. Nos quedan muchísimas partidas, risas, locuras y recuerdos por crear. ¡Felices 23! Te amamos muchísimo.",
  // CRÓNICAS: dragón que sobrevuela la línea de tiempo y esconde una sorpresa (js/cronicas.js)
