@@ -55,11 +55,12 @@ No he leído Alas de sangre pero sé que te encanta, así que me tomé el tiempo
 Que este nuevo capítulo de tu historia esté lleno de magia, amor, aventuras y muchas razones para sonreír. Que nunca nos falte tu risa Coraline, que hace brillar todo lo que hay alrededor tqmm! 
 Disfruta muchísimo tu día hoy y siempreeee! 🎂 🐉`},
 ],
- mensajeJunto:"Y bueno Caro, no podía faltar un pequeño recopilatorio de tantos momentos que hemos compartido contigo. Entre risas, ocurrencias y recuerdos que guardamos con muchísimo cariño, quisimos juntar un pedacito de todo lo vivido. Gracias por cada momento y por todas las anécdotas que todavía nos quedan por contar. Esperamos que al verlo sonrías tanto como nosotras al recordar cada uno de estos momentos. ",
- video:{poster:"",src:""}, // ej: src:"assets/videos/recap.mp4", poster:"assets/images/portada.jpg"
- felicitacion:"Caro, si algo tenemos claro es que la vida es mucho más bonita desde que coincidimos contigo. Ojalá este nuevo capítulo te regale tantas alegrías como las que tú nos has dado. Nos quedan muchísimas partidas, risas, locuras y recuerdos por crear. ¡Felices 23! Te amamos muchísimo.",
+
+mensajeJunto:"Y bueno Caro, no podía faltar un pequeño recopilatorio de tantos momentos que hemos compartido contigo. Entre risas, ocurrencias y recuerdos que guardamos con muchísimo cariño, quisimos juntar un pedacito de todo lo vivido. Gracias por cada momento y por todas las anécdotas que todavía nos quedan por contar. Esperamos que al verlo sonrías tanto como nosotras al recordar cada uno de estos momentos. ",
+video:{poster:"",src:""}, // ej: src:"assets/videos/recap.mp4", poster:"assets/images/portada.jpg"
+felicitacion:"Caro, si algo tenemos claro es que la vida es mucho más bonita desde que coincidimos contigo. Ojalá este nuevo capítulo te regale tantas alegrías como las que tú nos has dado. Nos quedan muchísimas partidas, risas, locuras y recuerdos por crear. ¡Felices 23! Te amamos muchísimo.",
  // CRÓNICAS: dragón que sobrevuela la línea de tiempo y esconde una sorpresa (js/cronicas.js)
- cronicas:{
+cronicas:{
   aviso:"¿Eso fue una sombra con alas sobre las crónicas? 👀",
   dragon:{
    src:"assets/dragon/dragon-volando.png", // ← PNG del dragón (vista cenital, fondo transparente). Cámbialo aquí si usas otro archivo.
